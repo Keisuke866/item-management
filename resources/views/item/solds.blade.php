@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', '商品一覧')
+@section('title', '売却商品一覧')
 
 @section('content_header')
-    <h1>商品一覧</h1>
+    <h1>売却商品一覧</h1>
 @stop
 
 @section('content')
@@ -35,7 +35,7 @@
                                 <th>種別</th>
                                 <th>詳細</th>
                                 <!--新規追加機能-->
-                                <th>成立</th>
+                                <th>キャンセル</th>
                                 <th>削除</th>
                             </tr>
                         </thead>
@@ -46,15 +46,18 @@
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->type }}</td>
                                     <td>{{ $item->detail }}</td>
-                                    <!--売買成立確認機能-->
-                                    <td>          
-                                    <form action="/items/update/{{ $item->id }}" method="POST">
-                                        @csrf
-                                        <input type="hidden" name="FinishId" value="{{ $item->id }}">
-                                        <button type="submit" class="btn">成立</button>
-                                    </form>   
-                                    </td>                
-
+                                    <!--キャンセル機能-->
+                                    <td>
+                                        <form action="/items/Updateing/{{ $item->id}}"method="POST">
+                                            @csrf 
+                                        <input type="hidden" name="CancelId" value="{{ $item->id}}">
+                                        <button type="submit"class="btn">キャンセル</button>
+                                        </form>
+                                    </td>                                   
+                                    
+                                    
+                                    
+                                    
                                     <!--削除機能-->
                                     <td>   
                                         <form action="/items/destroy/{{ $item->id }}" method="POST">
@@ -78,4 +81,3 @@
 
 @section('js')
 @stop
-

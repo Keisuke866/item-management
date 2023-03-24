@@ -3,11 +3,13 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>商品登録アプリ（仮）</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>なにが売れているか一目でわかる商品管理ソフト</p>
+    <p>・売れたものは成立ボタンをクリック！</p>
+    <p>→売却リストに表示されて把握がしやすく‼</p>
 @stop
 
 @section('css')
@@ -17,4 +19,5 @@
 @section('js')
     <script> console.log('Hi!'); </script>
 @stop
+
 
