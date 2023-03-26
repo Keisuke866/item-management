@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\item;
+use App\Models\Item;
 use App\Models\Finish;
 
 class FinishController extends Controller
