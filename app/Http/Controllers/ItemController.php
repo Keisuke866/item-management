@@ -69,7 +69,6 @@ class ItemController extends Controller
                 'detail' => $request->detail,
             ]);
 
-            return redirect('/items');
         }
 
         return view('item.add');
