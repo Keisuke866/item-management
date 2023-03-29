@@ -25,6 +25,7 @@ Route::prefix('items')->group(function () {
     Route::get('/', [App\Http\Controllers\ItemController::class, 'index']);
     Route::get('/add', [App\Http\Controllers\ItemController::class, 'add']);
     Route::post('/add', [App\Http\Controllers\ItemController::class, 'add']);
+    Route::get('/logout',[App\Http\Controllers\LoginController::class, 'logout'])->name('logout');
     //商品の削除機能//
     Route::post('/destroy/{id}',[App\Http\Controllers\ItemController::class,'destroy'])->name('item.destroy');
     //商品の検索機能//
